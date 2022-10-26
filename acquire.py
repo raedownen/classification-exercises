@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 import os
-from env import host, username, password
+from env import host, user, password
 
-def get_db_url(db, user=username, host=host, password=password):
+def get_db_url(db, user=user, host=host, password=password):
     '''
     This function uses my info from my env file 
     to create a connection url to access the codeup db.
