@@ -1,15 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
-
-# acquire
 from env import get_db_url
-from pydataset import data
-import seaborn as sns
-
-# turn off pink warning boxes
-import warnings
-warnings.filterwarnings("ignore")
 
 def new_titanic_data():
     '''
@@ -43,10 +35,6 @@ def get_titanic_data():
         
     return df
 
-titanic_df = get_titanic_data()
-
-titanic_df.head()
-
 def new_iris_data():
     '''
     This function reads the iris data from the Codeup db into a df.
@@ -68,7 +56,6 @@ def new_iris_data():
     
     return df
 
-
 def get_iris_data():
     '''
     This function reads in iris data from Codeup database, writes data to
@@ -88,9 +75,6 @@ def get_iris_data():
         df.to_csv('iris_df.csv')
         
     return df
-
-iris_df = get_iris_data()
-iris_df.head()
 
 def new_telco_data():
     '''
@@ -127,6 +111,3 @@ def get_telco_data():
         df.to_csv('telco.csv')
         
     return df
-
-telco_df = get_telco_data()
-telco_df.head()
