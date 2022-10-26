@@ -1,7 +1,15 @@
 import pandas as pd
 import numpy as np
 import os
-from env import get_db_url
+from env import host, username, password
+
+def get_db_url(db, user=username, host=host, password=password):
+    '''
+    This function uses my info from my env file 
+    to create a connection url to access the codeup db.
+    '''
+    return f'mysql+pymysql://{user}:{password}@{host}/{db}'
+
 
 def new_titanic_data():
     '''
